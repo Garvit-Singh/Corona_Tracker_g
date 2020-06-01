@@ -89,7 +89,7 @@ table{
     width: 100%;
     padding: 10px;
     border-collapse: collapse;
-    box-shadow: 0 8px 16px 0 #333333;
+    /*box-shadow: 0 8px 16px 0 #333333;*/
 }
 tr {
     border: 1px solid black;
@@ -125,12 +125,12 @@ td {
 
 #global td {
     text-align: center;
-    font-family: cursive;
+    font-family: sans-serif;
     font-size: 12px;
 }
 #global p{
     text-align: center;
-    font-family: cursive;
+    font-family: sans-serif;
     font-size: 15px;
 }
 #global tr:hover{
@@ -138,7 +138,7 @@ td {
 }
 #data td{
     text-align: center;
-    font-family: cursive;
+    font-family: sans-serif;
     font-size: 12px;
 }
 #data tr:hover{
