@@ -194,6 +194,9 @@ fetch('https://api.covid19api.com/total/dayone/country/india/status/confirmed')
     let Yi=125;
     let Yf=0;
     ctx.lineJoin= 'bevel';
+    const totalin = document.createElement("p");
+    totalin.innerHTML=`Confirmed Cases : ${data[data.length-1].Cases}`;
+    document.getElementById("ind").appendChild(totalin);
     for( let day=0 ; day < data.length ; day++) {
         console.log(data[day].Cases);
         setTimeout(() => {
