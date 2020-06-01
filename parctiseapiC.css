@@ -52,12 +52,12 @@ body {
 
 .button-search {
     position: absolute;
-    margin-top: 2px;
+    margin-top: 3px;
     margin-right: 5px;
     height: 25px;
     padding: 0px;
     background-color: white;
-    color: black;
+    color: grey;
     outline: none;
     float: right;
     border-radius: 15px;
