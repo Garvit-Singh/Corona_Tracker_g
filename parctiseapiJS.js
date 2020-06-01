@@ -123,6 +123,15 @@ const loadworld = () => {
         // console.log(data);
         // console.log(data.Global);
         // console.log(data.Countries);
+        const india = data.Countries[76];
+        console.log(india);
+        const totalin = document.createElement("div");
+        totalin.style.cssText="float:left";
+        totalin.innerHTML=`<br>
+                        Confirmed : ${india.TotalConfirmed}<h6 id="R" style="float:left">+${india.NewConfirmed}</h6><br><br>
+                        Deaths : ${india.TotalDeaths}<h6 id="R" style="float:left">+${india.NewDeaths}</h6><br><br>
+                        Recovered : ${india.TotalRecovered}<h6 id="G" style="float:left">+${india.NewRecovered}</h6><br><br>`;
+        document.getElementById("ind").appendChild(totalin);
         const data_new = document.createElement("p");
         data_new.innerHTML=`Newly Confirmed Cases : ${data.Global.NewConfirmed}`;
         data_new.style.cssText="color: #666600";
@@ -152,10 +161,10 @@ const loadworld = () => {
         data.Countries.map((obj)=> {
             // console.log(obj.Country+" "+/*obj.NewConfirmed+*/" "+obj.TotalConfirmed+" "+obj.NewDeaths+" "+
             //                                     obj.TotalDeaths+" "+obj.NewRecovered+" "+obj.TotalRecovered);
-            txtC = txtC +"<tr>"+    "<td>"+obj.Country+"</td>"+
-                                    "<td>"+obj.TotalConfirmed+`<h6 id="R">+${obj.NewConfirmed}<h6>`+"</td>"+
-                                    "<td>"+obj.TotalDeaths+`<h6 id="R">+${obj.NewDeaths}<h6>`+"</td>"+
-                                    "<td>"+obj.TotalRecovered+`<h6 id="G">+${obj.NewRecovered}<h6>`+"</td>"+      "</tr>";
+            txtC = txtC +"<tr>"+    "<td><strong>"+obj.Country+"<strong></td>"+
+                                    "<td><strong>"+obj.TotalConfirmed+`<h6 id="R">+${obj.NewConfirmed}<h6>`+"<strong></td>"+
+                                    "<td><strong>"+obj.TotalDeaths+`<h6 id="R">+${obj.NewDeaths}<h6>`+"<strong></td>"+
+                                    "<td><strong>"+obj.TotalRecovered+`<h6 id="G">+${obj.NewRecovered}<h6>`+"<strong></td>"+"</tr>";
         })
         txtC = txtC + "</table>";
         const date = new Date(data.Date);
@@ -194,9 +203,9 @@ fetch('https://api.covid19api.com/total/dayone/country/india/status/confirmed')
     let Yi=125;
     let Yf=0;
     ctx.lineJoin= 'bevel';
-    const totalin = document.createElement("strong");
-    totalin.innerHTML=`Confirmed Cases : ${data[data.length-1].Cases}`;
-    document.getElementById("ind").appendChild(totalin);
+//     const totalin = document.createElement("strong");
+//     totalin.innerHTML=`Confirmed Cases : ${data[data.length-1].Cases}`;
+//     document.getElementById("ind").appendChild(totalin);
     for( let day=0 ; day < data.length ; day++) {
         console.log(data[day].Cases);
         setTimeout(() => {
