@@ -42,7 +42,7 @@ body {
 .search-input{
     color: black;
     margin: 2px;
-    width: 92%;
+    width: 85%;
     padding-left: 10px;
     height: 25px;
     border: 0px;
@@ -53,11 +53,11 @@ body {
 .button-search {
     position: absolute;
     margin-top: 3px;
-    margin-right: 5px;
+    margin-right: 10px;
     height: 25px;
     padding: 0px;
     background-color: white;
-    color: grey;
+    color: black;
     outline: none;
     float: right;
     border-radius: 15px;
