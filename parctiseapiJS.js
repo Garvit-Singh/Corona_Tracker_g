@@ -71,7 +71,6 @@ for (var i = 0; i<n; i++) {
 // fetching data
 
 const loaddoc = () => {
-setTimeout(()=>{
     const search = document.getElementById("search").value;
     const x = document.getElementById("data");
     while(x.firstChild) {
@@ -106,7 +105,6 @@ const search_function = ( value ) => {
           txt = txt + "</table>";
           document.getElementById("data").innerHTML = txt;
     });
-},500);
 }
 
 /*
@@ -119,6 +117,7 @@ fetch('https://api.covid19india.org/state_district_wise.json')
 // https://api.covid19api.com/summary
 
 const loadworld = () => {
+  setTimeout(()=>{
     document.getElementById("hint").style.cssText="visibility: hidden;";
     fetch('https://api.covid19api.com/summary')
     .then(response => response.json())
@@ -176,6 +175,7 @@ const loadworld = () => {
         document.getElementById("global").innerHTML+= txtC;
     }
     );
+    },500);
 }
 /*
 fetch('./text.txt', {mode: 'no-cors'})
