@@ -161,3 +161,9 @@ td {
 .drawing{
     border: 1px solid black;
 }
+
+#hint{
+    font: 10px;
+    font-family: sans-serif;
+    color: cornflowerblue;
+}
