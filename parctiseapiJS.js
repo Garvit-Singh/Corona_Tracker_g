@@ -71,6 +71,7 @@ for (var i = 0; i<n; i++) {
 // fetching data
 
 const loaddoc = () => {
+setTimeout(()=>{
     const search = document.getElementById("search").value;
     const x = document.getElementById("data");
     while(x.firstChild) {
@@ -105,6 +106,7 @@ const search_function = ( value ) => {
           txt = txt + "</table>";
           document.getElementById("data").innerHTML = txt;
     });
+},500);
 }
 
 /*
