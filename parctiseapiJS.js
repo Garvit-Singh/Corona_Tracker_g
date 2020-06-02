@@ -118,7 +118,6 @@ fetch('https://api.covid19india.org/state_district_wise.json')
 
 const loadworld = () => {
   setTimeout(()=>{
-    document.getElementById("hint").style.cssText="visibility: hidden;";
     fetch('https://api.covid19api.com/summary')
     .then(response => response.json())
     .then(data => {
