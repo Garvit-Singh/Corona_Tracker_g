@@ -11,7 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
-<body onload="loadworld()">
+<body>
     <div class="header">
         <div class="header-content">COVID-19</div>
     </div>
@@ -34,7 +34,7 @@
     <div id="data"></div>
     </div>
 
-    <div class="box col-xs-12 col-md-4">
+    <div class="box col-xs-12 col-md-4" onclick="loadworld()">
         <h3>Global
             <!--
             <button class="button-search-global">
@@ -45,6 +45,7 @@
         </h3>
         <br/>
         <div id="global"></div>
+        <p id="hint">(Click on Global to get global data)</p>
     </div>
 
     <div class="box col-xs-12 col-md-4">
